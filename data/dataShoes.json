@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "Marca": "Sneaker Company",
+    "Nombre": "Fall Limited Edition Sneakers",
+    "Descripcion": "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer",
+    "Precio": 250.00,
+    "Descuento": 50.0,
+    "Imagenes": [
+      "./assets/images/image-product-1.jpg",
+      "./assets/images/image-product-2.jpg",
+      "./assets/images/image-product-3.jpg",
+      "./assets/images/image-product-4.jpg"
+    ],
+    "stock": 100
+  },
+  {
+    "id": 2,
+    "Marca": "Nike",
+    "Nombre": "Nike Air Max 270",
+    "Descripcion": "Zapatillas deportivas con una amortiguación única y diseño moderno.",
+    "Precio": 150.00,
+    "Descuento": 10.0,
+    "Imagenes": [
+      "https://m.media-amazon.com/images/I/71mNRq5AbfS._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61idapZJzzS._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81z4TTt3CJS._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71V47usDmJL._AC_SL1500_.jpg"
+    ],
+    "stock": 60
+  },
+  {
+    "id": 3,
+    "Marca": "Adidas",
+    "Nombre": "Adidas Ultraboost 22",
+    "Descripcion": "Zapatillas de running con una entresuela Boost para una mayor comodidad y energía en cada paso.",
+    "Precio": 180.00,
+    "Descuento": 15.0,
+    "Imagenes": [
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4b593057a18c47d2844dad9000ecd808_9366/Tenis_Ultraboost_22_Negro_GX3062_01_standard.jpg",
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/35738b799fbf4d45b2b5ad9000ed0b69_9366/Tenis_Ultraboost_22_Negro_GX3062_41_detail.jpg",
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/de8b4d2d36b54c79ab58ad9000ecf1b4_9366/Tenis_Ultraboost_22_Negro_GX3062_03_standard.jpg",
+      "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a05a71834504827b2e3ad9000fc7743_9366/Tenis_Ultraboost_22_Negro_GX3062_09_standard.jpg"
+    ],
+    "stock": 50
+  },
+  {
+    "id": 4,
+    "Marca": "Puma",
+    "Nombre": "Puma Suede Classic",
+    "Descripcion": "Zapatillas casuales de gamuza con un diseño icónico y cómodo para el día a día.",
+    "Precio": 75.00,
+    "Descuento": 20.0,
+    "Imagenes": [
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/374915/04/sv01/fnd/PNA/fmt/png/Tenis-Suede-Classic-XXI-Hombre",
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/374915/04/fnd/PNA/fmt/png/Tenis-Suede-Classic-XXI-Hombre",
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/374915/04/sv04/fnd/PNA/fmt/png/Tenis-Suede-Classic-XXI-Hombre",
+      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/374915/04/bv/fnd/PNA/fmt/png/Tenis-Suede-Classic-XXI-Hombre"
+    ],
+    "stock": 40
+  },
+  {
+    "id": 5,
+    "Marca": "New Balance",
+    "Nombre": "New Balance 990v5",
+    "Descripcion": "Zapatillas de running premium con soporte excepcional y diseño clásico.",
+    "Precio": 185.00,
+    "Descuento": 5.0,
+    "Imagenes": [
+      "https://newbalance.com.co/cdn/shop/files/M990GL6-1.jpg?v=1726526441&width=493",
+      "https://newbalance.com.co/cdn/shop/files/M990GL6-2.jpg?v=1726526441&width=493",
+      "https://newbalance.com.co/cdn/shop/files/M990GL6-3.jpg?v=1726526441&width=493",
+      "https://newbalance.com.co/cdn/shop/files/M990GL6-4.jpg?v=1726526441&width=493"
+    ],
+    "stock": 30
+  },
+  {
+    "id": 6,
+    "Marca": "Reebok",
+    "Nombre": "Reebok Classic Leather",
+    "Descripcion": "Zapatillas retro de cuero clásico, ideales para un look casual y cómodo.",
+    "Precio": 85.00,
+    "Descuento": 10.0,
+    "Imagenes": [
+      "https://reebokcol.vtexassets.com/arquivos/ids/744407-1200-auto?v=638272140182330000&width=1200&height=auto&aspect=true",
+      "https://reebokcol.vtexassets.com/arquivos/ids/744411-1200-auto?v=638272140197000000&width=1200&height=auto&aspect=true",
+      "https://reebokcol.vtexassets.com/arquivos/ids/744409-1200-auto?v=638272140189870000&width=1200&height=auto&aspect=true",
+      "https://reebokcol.vtexassets.com/arquivos/ids/744410-1200-auto?v=638272140193430000&width=1200&height=auto&aspect=true"
+    ],
+    "stock": 45
+  },
+  {
+    "id": 7,
+    "Marca": "Vans",
+    "Nombre": "Vans Old Skool",
+    "Descripcion": "Zapatillas clásicas de skate con una combinación de lona y gamuza.",
+    "Precio": 60.00,
+    "Descuento": 0.0,
+    "Imagenes": [
+      "https://vansco.vteximg.com.br/arquivos/ids/293408-450-450/VN000D3HY28-1.jpg?v=638146844249130000",
+      "https://vansco.vteximg.com.br/arquivos/ids/295295-450-450/VN000D3HY28-3.jpg?v=638754975997770000",
+      "https://vansco.vteximg.com.br/arquivos/ids/295295-450-450/VN000D3HY28-3.jpg?v=638754975997770000",
+      "https://vansco.vteximg.com.br/arquivos/ids/296159-450-450/VN000D3HY28-4.jpg?v=638754975997770000"
+    ],
+    "stock": 70
+  },
+  {
+    "id": 8,
+    "Marca": "Converse",
+    "Nombre": "Converse Chuck Taylor All Star",
+    "Descripcion": "Zapatillas clásicas de lona con suela de goma, ideales para cualquier ocasión casual.",
+    "Precio": 55.00,
+    "Descuento": 0.0,
+    "Imagenes": [
+      "https://www.converse.com/dw/image/v2/BJJF_PRD/on/demandware.static/-/Sites-cnv-master-catalog-we/default/dw970e3f23/images/c_08/M9160_C_08X1.jpg?sw=406",
+      "https://www.converse.com/dw/image/v2/BJJF_PRD/on/demandware.static/-/Sites-cnv-master-catalog-we/default/dw44157d7c/images/b_08/M9160_B_08X1.jpg?sw=406",
+      "https://www.converse.com/dw/image/v2/BJJF_PRD/on/demandware.static/-/Sites-cnv-master-catalog-we/default/dwb612ddf8/images/e_08/M9160_E_08X1.jpg?sw=406",
+      "https://www.converse.com/dw/image/v2/BJJF_PRD/on/demandware.static/-/Sites-cnv-master-catalog-we/default/dw7c2d7105/images/f_08/M9160_F_08X1.jpg?sw=406"
+    ],
+    "stock": 120
+  },
+  {
+    "id": 9,
+    "Marca": "Under Armour",
+    "Nombre": "Under Armour HOVR Phantom 2",
+    "Descripcion": "Zapatillas deportivas de alto rendimiento con tecnología HOVR para mayor comodidad.",
+    "Precio": 140.00,
+    "Descuento": 12.0,
+    "Imagenes": [
+      "https://i1.t4s.cz//products/3023017-604/under-armour-ua-hovr-phantom-2-333731-3023017-605-960.webp",
+      "https://i1.t4s.cz//products/3023017-604/under-armour-ua-hovr-phantom-2-333731-3023017-607-960.webp",
+      "https://i1.t4s.cz//products/3023017-604/under-armour-ua-hovr-phantom-2-333731-3023017-606-960.webp",
+      "https://i1.t4s.cz//products/3023017-604/under-armour-ua-hovr-phantom-2-333731-3023017-608-960.webp"
+    ],
+    "stock": 60
+  },
+  {
+    "id": 10,
+    "Marca": "Saucony",
+    "Nombre": "Saucony Ride 14",
+    "Descripcion": "Zapatillas de running con tecnología PWRRUN, ofreciendo una gran amortiguación y suavidad.",
+    "Precio": 120.00,
+    "Descuento": 8.0,
+    "Imagenes": [
+      "https://www.sportlife.es/uploads/s1/10/00/64/03/saucony-ride-14_2_790x454.jpeg",
+      "https://www.sportlife.es/uploads/s1/10/00/64/13/saucony-ride-14-1.jpeg",
+      "https://www.sportlife.es/uploads/s1/10/00/64/23/saucony-ride-14-3.jpeg",
+      "https://www.sportlife.es/uploads/s1/10/00/64/35/saucony-ride-14-2.jpeg"
+    ],
+    "stock": 35
+  }
+]

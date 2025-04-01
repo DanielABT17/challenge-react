@@ -1,0 +1,80 @@
+@import url("../../styles/defaultStyles.css");
+
+.card__shoes{
+    background-color:var(--white);
+    width: 275px; 
+    height: 425px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--black);
+    transition: all 0.3s ease-in-out;
+}
+
+.card__shoes:hover {
+    box-shadow: 0px 0px 20px var(--black);
+    transition: all 0.3s ease-in-out;
+}
+
+.card__shoes--img{
+    width: 100%;
+    height:min-content ;
+}
+
+.card__shoes--div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 275px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+}
+
+.shoes__info--title{
+    font-size: 18px;
+    font-weight: var(--bold-text);
+    color: var(--black);
+    margin-top: 10px;
+}
+
+.card__shoes--info{
+   padding: 10px 20px 20px 20px;
+   
+}
+
+.shoes__info--marca{
+    display: block;
+    width: max-content;
+    margin: 0px;
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+    border-radius: 5px;
+}
+
+.shoes__info--div{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.info__div--card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div__card--shoes{
+    font-size: 18px;
+    font-weight: var(--light-text);
+    color: var(--orange);
+    margin: 2px;
+}
+
+.shoes__info--discount{
+    font-size: 14px;
+    border-radius: 5px;
+    padding:5px ;
+    margin: 2px;
+    background-color: var(--orange);
+    font-weight: var(--light-text);
+    color: var(--white);
+}

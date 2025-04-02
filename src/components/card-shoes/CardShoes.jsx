@@ -1,6 +1,8 @@
 import styles from "./CardShoes.module.css";
 
 export default function ({ shoes }) {
+  const priceEnd = shoes.Precio - shoes.Precio * (shoes.Descuento / 100);
+
   return (
     <div className={styles["card__shoes"]} id={shoes.id.toString()}>
       <div className={styles["card__shoes--div"]}>
@@ -16,10 +18,7 @@ export default function ({ shoes }) {
         <div className={styles["shoes__info--div"]}>
           <div className={styles["info__div--card"]}>
             <p className={styles["div__card--shoes"]}>
-              {"$ " +
-                (shoes.Precio - shoes.Precio * (shoes.Descuento / 100)).toFixed(
-                  2
-                )}
+              {"$ " + priceEnd.toFixed(2)}
             </p>
           </div>
 

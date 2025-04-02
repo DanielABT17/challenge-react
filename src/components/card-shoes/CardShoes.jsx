@@ -16,7 +16,10 @@ export default function ({ shoes }) {
         <div className={styles["shoes__info--div"]}>
           <div className={styles["info__div--card"]}>
             <p className={styles["div__card--shoes"]}>
-              {"$ " + ((shoes.Precio * shoes.Descuento) / 100).toFixed(2)}
+              {"$ " +
+                (shoes.Precio - shoes.Precio * (shoes.Descuento / 100)).toFixed(
+                  2
+                )}
             </p>
           </div>
 

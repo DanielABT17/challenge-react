@@ -4,26 +4,39 @@
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
+    position: fixed; /* Esto hará que la barra quede fija en la parte superior */
+    top: 0; /* La barra estará en la parte superior */
+    left: 0; /* Asegura que ocupe todo el ancho */
+    right: 0;
+    z-index: 1000; /* Para asegurarte de que esté por encima de otros elementos */
+    padding: .5rem 2rem;
 }
 
 .top__bar__avatar {
     width: 40px;
     height: 40px;
     position: absolute;
+    cursor: pointer;
+    
+    &:hover {
+        border-radius: 50%;
+        border: 1.5px solid var(--orange);
+    }
 }
 
 .top__bar__cart {
     position: relative;
     top: 0.8rem;
     right: 2rem;
+    cursor: pointer;
 }
 
 .line {
-    margin: 0 0 0 14rem;
-    width: 70%;
+    margin: 0.5rem 0 0 22.7rem;
+    width: 64.2%;
     position: fixed;
     top: 99px;
-    background-color: var(--light-grayish-blue);
+    border: 1px solid var(--light-grayish-blue);
 }
 
 .top__bar--logo {

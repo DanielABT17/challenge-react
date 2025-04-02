@@ -1,9 +1,15 @@
+import React, { useState } from 'react';
 import logo from '../../assets/images/logo.svg';
 import logoCart from '../../assets/images/icon-cart.svg';
 import avatar from '../../assets/images/image-avatar.png';
 import styles from './TopBar.module.css';
+import CartEmpty from '../cart/cart-empty/CartEmpty';
 
 const TopBar = () => {
+    const [showCart, setShowCart] = useState(false);
+    const handleCartClick = () => {
+        setShowCart(!showCart);
+    }
     return (
         <>
         <div className={styles['top__bar']}> 
@@ -16,9 +22,10 @@ const TopBar = () => {
                 <button className={styles['nav__button']}>Contact</button>
             </div>
             <div className={styles['top__bar--cart']}>
-                <img className={styles['top__bar__cart']} src={logoCart} />
+                <img onClick={handleCartClick} className={styles['top__bar__cart']} src={logoCart} />
                 <img className={styles['top__bar__avatar']} src={avatar} />
             </div>
+            {showCart ? <CartEmpty /> : null}
         </div>
         <hr className={styles['line']}/>
         </>

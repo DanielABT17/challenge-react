@@ -10,8 +10,9 @@
 .top__bar__avatar {
     width: 40px;
     height: 40px;
-    position: absolute;
+    position: relative;
     cursor: pointer;
+    bottom: 17px;
     
     &:hover {
         border-radius: 50%;
@@ -28,9 +29,9 @@
 }
 
 .top__bar__cart {
-    position: relative;
+    position: absolute;
     top: 0.8rem;
-    right: 2rem;
+    right: 3rem;
     cursor: pointer;
 }
 
@@ -68,4 +69,33 @@
     &:hover::after {
         transform: scaleX(1);
     }
+}
+
+.bar__cart--quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.cart__quantity--cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    font-size: 12px;
+    background-color: var(--orange);
+    border-radius: 15px;
+    z-index: 1000;
+}
+.quantity__cart--number{
+    font-size: 12px;
+    color: white;
+    font-weight: var(--bold-text);
+    padding: 3px 5px;
+    margin: 0;
+    
 }

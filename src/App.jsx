@@ -8,6 +8,9 @@ import './styles/defaultStyles.css'
 import ProductDetail from './views/ProductDetail/ProductDetail.jsx'
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -20,8 +23,12 @@ function App() {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <TopBar />
       <MenuShoes />
+=======
+    
+>>>>>>> Stashed changes
 =======
     
 >>>>>>> Stashed changes

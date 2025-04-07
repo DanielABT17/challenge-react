@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
 import styles from "./CartEmpty.module.css";
 import ListCart from "../list-cart/ListCart";
 import { useShoesStore } from "../../../zustand/shoesStore";
 
 const CartEmpty = () => {
-  const [isEmpty, setIsEmpty] = useState(true);
   const cartList = useShoesStore.getState().cartList;
-  useEffect(() => {
-    if (cartList == undefined || cartList.length == 0) {
-      setIsEmpty(true);
-    } else {
-      setIsEmpty(false);
-    }
-  }, [cartList]);
+  const isEmpty = cartList == undefined || cartList.length == 0;
   return (
     <div className={styles["cart"]}>
       <div className={styles["cart__header"]}>

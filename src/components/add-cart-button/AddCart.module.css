@@ -1,0 +1,25 @@
+@import url(../../styles/defaultStyles.css);
+
+
+.div__AddCart--button{
+width: 15%;
+height: 50px;
+background-color: var(--orange);
+border-radius: 10px;
+font-weight: 800;
+font-size: 18px;
+border: none;    
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.div__AddCart--button img{
+    margin-right: 20px;
+    color: var(--black);
+}
+
+
+
+

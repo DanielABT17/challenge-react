@@ -1,0 +1,7 @@
+.menu__shoes {
+    margin-left: 9rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 18.8rem 18.8rem 18.8rem 18.8rem 18.8rem;
+    gap: 2rem;
+}

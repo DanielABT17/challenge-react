@@ -1,0 +1,70 @@
+@import url(../../styles/defaultStyles.css);
+
+
+
+.div__DescriptionDetail
+{
+    width: 30%;
+    margin-left: 8%;
+   
+}
+
+.div__ShowTextDetail--marcaContainer{
+    color: var(--dark-grayish-blue);
+    letter-spacing: 1px;
+    font-size: 12px;
+
+}
+
+.ShowTextDetail__titleContainer--title{
+    font-size: 45px;
+    letter-spacing: -1px;
+}
+
+.ShowTextDetail__descriptionContainer--description{
+    color: var(--dark-grayish-blue);
+    width: 90%;
+    line-height: 1.6;
+}
+
+.div__Price--priceContainer{
+    width:28%;
+}
+
+.div__Price--priceContainer div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div__Price--priceContainer h2{
+    width: 50%;
+    font-size: 25px;
+}
+
+.prince__priceContainer--discount{
+    width: min-content;
+    font-weight: 900;
+    background-color: black;
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+
+}
+
+.prince__priceContainer--fullPrice{
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.div__buttonsContainer{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "./ImageProductDetail.module.css";
 
-export default function ImageProductDetail({ imagesList }) {
+export default function ImageProductDetail({ productInformation }) {
     const [selectedImage, setSelectedImage] = useState(0);
 
     function handleSecondaryImageClick(index) {
@@ -11,11 +11,11 @@ export default function ImageProductDetail({ imagesList }) {
     return (
         <div className={style["div__imagesContainer"]}>
             <div className={style["div__imagesContainer--principalImageContainer"]}>
-                <PrincipalImage principalImage={imagesList[selectedImage]} />  
+                <PrincipalImage principalImage={productInformation[selectedImage]} />  
             </div>
 
             <div className={style["div__imagesContainer--secondaryImages"]}>
-                {imagesList.map((image, index) => (
+                {productInformation.map((image, index) => (
                     <SecondaryImage 
                         key={index} 
                         image={image} 

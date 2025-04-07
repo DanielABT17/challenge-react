@@ -1,35 +1,46 @@
 import { useState } from "react";
+import style from "./ImageProductDetail.module.css";
 
 export default function ImageProductDetail({ imagesList }) {
     const [selectedImage, setSelectedImage] = useState(0);
 
     function handleSecondaryImageClick(index) {
-        setSelectedImage(index); // Actualiza la imagen principal con la seleccionada
+        setSelectedImage(index);
     }
 
     return (
-        <div className="product-detail-images">
-            <PrincipalImage principalImage={imagesList[selectedImage]} />
+        <div className={style["div__imagesContainer"]}>
+            <div className={style["div__imagesContainer--principalImageContainer"]}>
+                <PrincipalImage principalImage={imagesList[selectedImage]} />  
+            </div>
 
-            <div className="secondary-images">
-                {imagesList.map((image, index) => {
-                    return (
-                        <SecondaryImage 
-                            key={index} 
-                            image={image} 
-                            onClick={() => handleSecondaryImageClick(index)} // Pasar el índice al hacer clic
-                        />
-                    );
-                })}
+            <div className={style["div__imagesContainer--secondaryImages"]}>
+                {imagesList.map((image, index) => (
+                    <SecondaryImage 
+                        key={index} 
+                        image={image} 
+                        isSelected={selectedImage === index}
+                        onClick={() => handleSecondaryImageClick(index)}
+                    />
+                ))}
             </div>
         </div>
     );
 }
 
 export function PrincipalImage({ principalImage }) {
-    return <img src={principalImage} alt="image" />;
+    return <img src={principalImage} alt="" className={style["div__principalImageContainer--principalImage"]}/>;
 }
 
-export function SecondaryImage({ image, onClick }) {
-    return <img src={image} alt="" onClick={onClick} />;
+export function SecondaryImage({ image, isSelected, onClick }) {
+    return (
+        <div className={`${style["div__secondaryImageContainer"]}  ${isSelected ? style["selected"]: ""}`}>
+            <img 
+                src={image} 
+                alt="" 
+                onClick={onClick} 
+                className={style["div__secondaryImageContainer--secondaryImage"]}
+            />
+        </div>
+    );
 }

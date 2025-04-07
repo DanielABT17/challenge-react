@@ -1,0 +1,59 @@
+@import url(../../styles/defaultStyles.css);
+.div__imagesContainer
+{
+    width: min-content;
+}
+.div__imagesContainer--secondaryImages
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.div__secondaryImageContainer
+{
+    width: 230px;
+    height: 230px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.div__secondaryImageContainer--secondaryImage
+{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.selected
+{
+    border-color: var(--orange);
+    border-width: 5px;
+    transition: opacity 0.2s ease;
+    opacity: 60%;
+    width: 226px;
+    height: 226px;
+}
+.div__principalImageContainer--principalImage
+{
+    width: 100%;
+    height: auto;
+}
+.div__imagesContainer--principalImageContainer
+{
+    width: 1000px;
+    height: 1000px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+}
+

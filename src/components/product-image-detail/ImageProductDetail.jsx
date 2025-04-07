@@ -5,7 +5,7 @@ export default function ImageProductDetail({ imagesList }) {
     const [selectedImage, setSelectedImage] = useState(0);
 
     function handleSecondaryImageClick(index) {
-        setSelectedImage(index); // Cambia la imagen principal y marca la imagen seleccionada
+        setSelectedImage(index);
     }
 
     return (
@@ -19,7 +19,7 @@ export default function ImageProductDetail({ imagesList }) {
                     <SecondaryImage 
                         key={index} 
                         image={image} 
-                        isSelected={selectedImage === index} // Verifica si está seleccionada
+                        isSelected={selectedImage === index}
                         onClick={() => handleSecondaryImageClick(index)}
                     />
                 ))}

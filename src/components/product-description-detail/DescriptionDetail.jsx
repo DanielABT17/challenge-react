@@ -56,7 +56,7 @@ export function Price({productInformation}){
 
         <section className={styles['div__Price--priceContainer']}>
             <div>
-                {hasDiscount && (<h2>${((productInformation.Descuento/100)*productInformation.Precio).toFixed(2)}</h2>)}
+                {hasDiscount && (<h2>${(productInformation.Precio-(productInformation.Descuento/100)*productInformation.Precio).toFixed(2)}</h2>)}
                 {hasDiscount && (<p className={styles['prince__priceContainer--discount']}>{productInformation.Descuento}%</p>)} 
             </div>
 

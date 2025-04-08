@@ -1,7 +1,8 @@
 @import url(../../styles/defaultStyles.css);
 .div__imagesContainer
 {
-    width: min-content;
+    width: 23%;
+    
 }
 .div__imagesContainer--secondaryImages
 {
@@ -12,15 +13,14 @@
 }
 .div__secondaryImageContainer
 {
-    width: 230px;
-    height: 230px;
+    width: 22%;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-color: var(--grayish-blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 15px;
     overflow: hidden;
 }
 .div__secondaryImageContainer--secondaryImage
@@ -32,11 +32,15 @@
 .selected
 {
     border-color: var(--orange);
-    border-width: 5px;
+    border-width: 2px;
+    opacity: 80%;
+
+}
+
+.selected img
+{
     transition: opacity 0.2s ease;
-    opacity: 60%;
-    width: 226px;
-    height: 226px;
+    opacity: 40%;
 }
 .div__principalImageContainer--principalImage
 {
@@ -45,15 +49,14 @@
 }
 .div__imagesContainer--principalImageContainer
 {
-    width: 1000px;
-    height: 1000px;
+    width: 100%;
     border-style: solid;
     border-width: 1px;
     border-color: var(--grayish-blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 15px;
     overflow: hidden;
 }
 

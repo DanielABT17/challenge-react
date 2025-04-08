@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./ImageProductDetail.module.css";
+import styles from "./ImageProductDetail.module.css";
 
 export default function ImageProductDetail({ productInformation }) {
     const [selectedImage, setSelectedImage] = useState(0);
@@ -9,12 +9,12 @@ export default function ImageProductDetail({ productInformation }) {
     }
 
     return (
-        <div className={style["div__imagesContainer"]}>
-            <div className={style["div__imagesContainer--principalImageContainer"]}>
+        <div className={styles["div__imagesContainer"]}>
+            <div className={styles["div__imagesContainer--principalImageContainer"]}>
                 <PrincipalImage principalImage={productInformation[selectedImage]} />  
             </div>
 
-            <div className={style["div__imagesContainer--secondaryImages"]}>
+            <div className={styles["div__imagesContainer--secondaryImages"]}>
                 {productInformation.map((image, index) => (
                     <SecondaryImage 
                         key={index} 
@@ -29,17 +29,17 @@ export default function ImageProductDetail({ productInformation }) {
 }
 
 export function PrincipalImage({ principalImage }) {
-    return <img src={principalImage} alt="" className={style["div__principalImageContainer--principalImage"]}/>;
+    return <img src={principalImage} alt="" className={styles["div__principalImageContainer--principalImage"]}/>;
 }
 
 export function SecondaryImage({ image, isSelected, onClick }) {
     return (
-        <div className={`${style["div__secondaryImageContainer"]}  ${isSelected ? style["selected"]: ""}`}>
+        <div className={`${styles["div__secondaryImageContainer"]}  ${isSelected ? styles["selected"]: ""}`}>
             <img 
                 src={image} 
                 alt="" 
                 onClick={onClick} 
-                className={style["div__secondaryImageContainer--secondaryImage"]}
+                className={styles["div__secondaryImageContainer--secondaryImage"]}
             />
         </div>
     );

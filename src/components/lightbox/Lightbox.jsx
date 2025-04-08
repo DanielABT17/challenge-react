@@ -1,23 +1,28 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./Lightbox.module.css";
 import { SecondaryImage } from "../product-image-detail/ImageProductDetail.jsx";
 
 export default function Lightbox({ images, initialIndex, onClose, onChangeImage }) {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
-    useEffect(() => {
-        onChangeImage(currentIndex);
-    }, [currentIndex]);
-
     function handlePrev() {
-        setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+        setCurrentIndex(prev => {
+            const value = prev === 0 ? images.length - 1 : prev - 1;
+            onChangeImage(value);
+            return value;
+        });
     }
-
+    
     function handleNext() {
-        setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+        setCurrentIndex(prev => {
+            const value = prev === images.length - 1 ? 0 : prev + 1;
+            onChangeImage(value);
+            return value;
+        });
     }
     function handleSecondaryImageClick(index) {
         setCurrentIndex(index);
+        onChangeImage(index);
     }
 
     return (

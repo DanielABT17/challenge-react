@@ -16,10 +16,10 @@ align-items: center;
 padding: 0 75px;
 }
 
-.div__AddCart--button img{
+.AddCart__button--image{
+    margin-bottom: 2.5px;
     margin-right: 10px;
-    color: var(--black);
-    fill: var(--black);
+    filter: grayscale(100%) contrast(100%) brightness(0);
 }
 
 .div__AddCart--button:hover{

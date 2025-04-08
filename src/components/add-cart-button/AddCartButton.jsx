@@ -6,7 +6,7 @@ const AddCartButton = () => {
     return(
         <div className={styles['div__AddCart']}>
             <button className={styles['div__AddCart--button']}>
-                <img src={cart} alt="cart-icon" />
+                <img className={styles["AddCart__button--image"]} src={cart} alt="cart-icon" />
                 <span>Add to cart</span>
             </button>
         </div>

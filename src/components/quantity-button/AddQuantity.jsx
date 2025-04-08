@@ -15,11 +15,11 @@ const AddQuantity = () =>{
         <div className={styles["div__counter"]}>
             
                 <button className={styles["div__counter--minusButton"]} onClick={()=>setQuantity(quantity + 1)} >
-                    <img src={plusIcon}alt="plus"/>
+                    <img className={styles["counter__minusButton--image"]} src={plusIcon}alt="plus"/>
                 </button>
                     <span>{quantity}</span>
                 <button className={`${styles["div__counter--plusButton"]} ${quantity<=1&&styles["disabled"]}`} onClick={()=>setQuantity (quantity - 1) } disabled={quantity <= 1}  > 
-                    <img src={minusIcon} alt="minus" />
+                    <img className={styles["counter__minusButton--image"]} src={minusIcon} alt="minus" />
                 </button>
         </div>
 

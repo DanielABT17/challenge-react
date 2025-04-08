@@ -18,10 +18,9 @@ span{
     background-color: transparent;
     border: none;
     cursor: pointer;
-   
 }
 
-img{
+.counter__minusButton--image{
     width: 15px;
 }
 
@@ -35,4 +34,5 @@ img{
 
 .disabled:hover{
     cursor: not-allowed;
+    opacity: 0.5;
 }

@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <TopBar />
-      <ProductDetail id={1} />
+      <MenuShoes />
     </>
   );
 }

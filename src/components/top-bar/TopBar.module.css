@@ -1,6 +1,7 @@
 @import url("../../styles/defaultStyles.css");
 
 .top__bar {
+    margin: 0;
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
@@ -37,10 +38,10 @@
 }
 
 .line {
-    margin-top: 1rem;
+    margin: 0;
     margin-left: 9rem;
     width: 84.5%;
-    border: 1px solid var(--light-grayish-blue);
+    border: .5px solid var(--light-grayish-blue);
 }
 
 .top__bar--logo {
@@ -53,7 +54,6 @@
     color: var(--dark-grayish-blue);
     font-size: 0.85rem;
     cursor: pointer;
-    padding-bottom: 1rem;
     position: relative;
 
     &::after {

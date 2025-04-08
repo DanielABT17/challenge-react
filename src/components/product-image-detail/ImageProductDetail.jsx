@@ -1,16 +1,22 @@
 import { useState } from "react";
 import styles from "./ImageProductDetail.module.css";
+import Lightbox from "../lightbox/Lightbox.jsx";
 
 export default function ImageProductDetail({ productInformation }) {
     const [selectedImage, setSelectedImage] = useState(0);
+    const [lightboxOpen, setLightboxOpen] = useState(false);
 
     function handleSecondaryImageClick(index) {
         setSelectedImage(index);
     }
 
+    function handlePrincipalImageClick() {
+        setLightboxOpen(true);
+    }
+
     return (
         <div className={styles["div__imagesContainer"]}>
-            <div className={styles["div__imagesContainer--principalImageContainer"]}>
+            <div className={styles["div__imagesContainer--principalImageContainer"]} onClick={handlePrincipalImageClick}>
                 <PrincipalImage principalImage={productInformation[selectedImage]} />  
             </div>
 
@@ -24,6 +30,15 @@ export default function ImageProductDetail({ productInformation }) {
                     />
                 ))}
             </div>
+
+            {lightboxOpen && (
+                <Lightbox 
+                    images={productInformation} 
+                    initialIndex={selectedImage}
+                    onClose={() => setLightboxOpen(false)}
+                    onChangeImage={(index) => setSelectedImage(index)}
+                />
+            )}
         </div>
     );
 }

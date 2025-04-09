@@ -2,10 +2,26 @@ import { useShoesStore } from "../shoesStore";
 
 export const createCartList = (set) => ({
     cartList: [{id:1 , quantity: 5}, {id:2, quantity: 1}, {id:3, quantity: 1}],
-    addCart: (id) => {
-        set((state) => ({
-            cartList: [...state.cartList, {id: id, quantity: 1}],
-        }));
+    addCart: (id, quantity) => {
+        set((state) => {
+            const existingItem = state.cartList.find(item => item.id === id);
+    
+            if (existingItem) {
+                // Si el producto ya está en el carrito, actualiza la cantidad
+                return {
+                    cartList: state.cartList.map(item =>
+                        item.id === id
+                            ? { ...item, quantity: item.quantity + quantity }
+                            : item
+                    )
+                };
+            } else {
+                // Si no está en el carrito, lo agrega como nuevo
+                return {
+                    cartList: [...state.cartList, { id, quantity }]
+                };
+            }
+        });
     },
     updateCartIncreace: (id) => {
         set((state) => ({

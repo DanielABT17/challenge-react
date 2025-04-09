@@ -1,6 +1,8 @@
 import { useShoesStore } from "../../../zustand/shoesStore";
 import styles from "./ItemListCart.module.css";
 import iconDelete from "../../../assets/images/icon-delete.svg";
+
+
 await useShoesStore.getState().fetch();
 
 export default function ItemListCart({ idShoes, quantity }) {

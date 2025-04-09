@@ -22,7 +22,7 @@ padding: 0 75px;
     filter: grayscale(100%) contrast(100%) brightness(0);
 }
 
-.div__AddCart--button:hover{
+.div__AddCart--button:hover, .div__AddCart--button:disabled:hover{
     transition: opacity 0.3s ease;
     opacity: 0.6;
 
@@ -33,6 +33,11 @@ padding: 0 75px;
     opacity: 1;
 }
 
+.div__AddCart--button:disabled {
+    opacity: 1;
+    color: var(--black);
+    cursor: not-allowed;
+  }
 
 
 

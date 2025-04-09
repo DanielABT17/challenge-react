@@ -1,24 +1,17 @@
 import styles from './DescriptionDetail.module.css';
-import { useState } from 'react';
 import AddCartButton from '../add-cart-button/AddCartButton.jsx';
 import AddQuantity from '../quantity-button/AddQuantity.jsx';
 
 
 
 export default function DescriptionDetail({productInformation}) {
-    const [description, setDescription] = useState(0);
-
-    function handleDescriptionClick(index) {
-        setDescription(index); 
-    }
-
     return(
         <div className = {styles['div__DescriptionDetail']}>
             <ShowTextDetail productInformation={productInformation} />
             <Price productInformation={productInformation} />
             <div className={styles['div__buttonsContainer']}>
-                <AddQuantity />
-                <AddCartButton />
+                <AddQuantity productInformation={productInformation}/>
+                <AddCartButton productId ={productInformation.id} />
             </div>
             
         </div>
@@ -65,4 +58,6 @@ export function Price({productInformation}){
 
     )
 }
+
+
 

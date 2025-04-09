@@ -1,20 +1,22 @@
-import {useShoesStore} from "../../zustand/shoesStore";
+import { useShoesStore } from "../../zustand/shoesStore";
 import ImageProductDetail from "../../components/product-image-detail/ImageProductDetail";
 import DescriptionDetail from "../../components/product-description-detail/DescriptionDetail";
-import Style from '../ProductDetail/ProductDetail.module.css';
+import Style from "../ProductDetail/ProductDetail.module.css";
+import { useParams } from "react-router-dom";
 await useShoesStore.getState().fetch();
 
-export default function ProductDetail({id})
-{
-        const products = useShoesStore(state => state.shoes);   
+export default function ProductDetail() {
+  const { id } = useParams();
+  const products = useShoesStore((state) => state.shoes);
+  const productInformation = products.find(
+    (product) => product.id === parseInt(id)
+  );
+  console.log(productInformation);
 
-        const productInformation = products.find((product) => product.id === id);
-
-
-    return(
-        <article className={Style["article__detailView"]}>
-            <ImageProductDetail productInformation={productInformation.Imagenes} />
-            <DescriptionDetail productInformation={productInformation} />
-        </article>
-    )
+  return (
+    <article className={Style["article__detailView"]}>
+      <ImageProductDetail productInformation={productInformation.Imagenes} />
+      <DescriptionDetail productInformation={productInformation} />
+    </article>
+  );
 }

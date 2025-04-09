@@ -3,8 +3,10 @@ import ListCart from "../list-cart/ListCart";
 import { useShoesStore } from "../../../zustand/shoesStore";
 
 const CartEmpty = () => {
-  const cartList = useShoesStore.getState().cartList;
-  const isEmpty = cartList == undefined || cartList.length == 0;
+  const cartList = useShoesStore((state) => state.cartList);
+  const isEmpty =
+    cartList == undefined || cartList.length == 0 || cartList === null;
+  console.log(cartList);
   return (
     <div className={styles["cart"]}>
       <div className={styles["cart__header"]}>

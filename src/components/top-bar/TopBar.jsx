@@ -5,8 +5,10 @@ import avatar from "../../assets/images/image-avatar.png";
 import styles from "./TopBar.module.css";
 import CartEmpty from "../cart/cart-empty/CartEmpty";
 import { useShoesStore } from "../../zustand/shoesStore";
+import { useNavigate } from "react-router-dom";
 
 const TopBar = () => {
+  const navigate = useNavigate();
   const [showCart, setShowCart] = useState(false);
   const handleCartClick = () => {
     setShowCart(!showCart);
@@ -16,7 +18,11 @@ const TopBar = () => {
     <>
       <div className={styles["top__bar"]}>
         <div className={styles["top__bar--nav"]}>
-          <img className={styles["top__bar--logo"]} src={logo} />
+          <img
+            className={styles["top__bar--logo"]}
+            src={logo}
+            onClick={() => navigate("/")}
+          />
           <button className={styles["nav__button"]}>Collections</button>
           <button className={styles["nav__button"]}>Men</button>
           <button className={styles["nav__button"]}>Women</button>
@@ -25,13 +31,14 @@ const TopBar = () => {
         </div>
         <div className={styles["top__bar--cart"]}>
           <div className={styles["bar__cart--quantity"]}>
-            {quantityCart != 0 && (
-              <div className={styles["cart__quantity--cart"]}>
-                <p className={styles["quantity__cart--number"]}>
-                  {quantityCart}
-                </p>
-              </div>
-            )}
+            {quantityCart == 0 ||
+              (quantityCart !== null && (
+                <div className={styles["cart__quantity--cart"]}>
+                  <p className={styles["quantity__cart--number"]}>
+                    {quantityCart}
+                  </p>
+                </div>
+              ))}
 
             <img
               onClick={handleCartClick}

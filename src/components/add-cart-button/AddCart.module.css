@@ -2,7 +2,7 @@
 
 
 .div__AddCart--button{
-width: 100%;
+width: 290px;
 height: 50px;
 background-color: var(--orange);
 border-radius: 10px;
@@ -25,11 +25,11 @@ padding: 0 75px;
 .div__AddCart--button:hover, .div__AddCart--button:disabled:hover{
     transition: opacity 0.3s ease;
     opacity: 0.6;
-
 }
+
+
 .div__AddCart--button span:hover
 {
-    
     opacity: 1;
 }
 
@@ -38,6 +38,23 @@ padding: 0 75px;
     color: var(--black);
     cursor: not-allowed;
   }
+  
+.alert__message
+{
+    display: none;
+    position: fixed;
+    width: 500px;
+    right: 410px;
+    margin: 20px 0;
+    opacity: 0.6;
+}
+.div__AddCart--button:disabled:hover ~.alert__message{
+    display: flex;
+        position: fixed;
+        background-color: var(--light-grayish-blue);
+        padding: 20px;
+        border-radius: 15px;
+}
 
 
 

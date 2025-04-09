@@ -1,65 +1,93 @@
+
 import { useShoesStore } from "../shoesStore";
 
 export const createCartList = (set) => ({
-    cartList: [{id:1 , quantity: 5}, {id:2, quantity: 1}, {id:3, quantity: 1}],
+    cartList: JSON.parse(localStorage.getItem('cartList')) || [],
+    quantity: 1,
+
+    AddQuantity: (quantity) => {
+        set(() => ({
+            quantity: quantity
+        }));
+    },
+
+
+
     addCart: (id, quantity) => {
         set((state) => {
-            const existingItem = state.cartList.find(item => item.id === id);
+        const existingItem = state.cartList.find(item => item.id === id);
+        
+        if (existingItem) {
+            // If the product already exists in the cart, update the quantity
+            const updatedCartList = state.cartList.map(item =>
+                item.id === id
+                    ? { ...item, quantity: item.quantity + quantity }
+                    : item
+            );
+            
+            // Update local storage after modifying the cartList
+            localStorage.setItem("cartList", JSON.stringify(updatedCartList));
+            
+            return { cartList: updatedCartList };
+        } else {
+            // If the product is not in the cart, add it as a new item
+            const updatedCartList = [...state.cartList, { id, quantity }];
+            
+            // Update local storage after adding the new item
+            localStorage.setItem("cartList", JSON.stringify(updatedCartList));
+            
+            return { cartList: updatedCartList };
+        }
+    });
+        
+    },
+     updateCartIncreace: (id) => {
+    set((state) => {
+      const updatedCart = state.cartList.map((item) => {
+        if (item.id !== id) return item;
+
+        const stock = state.shoes.find((shoe) => shoe.id === id)?.stock;
+
+        if (item.quantity >= stock) return item;
+        return { ...item, quantity: item.quantity + 1 };
+      });
+
+      // Save updated cart to localStorage
+      localStorage.setItem('cartList', JSON.stringify(updatedCart));
+
+      return { cartList: updatedCart };
+    });
+    },
     
-            if (existingItem) {
-                // Si el producto ya está en el carrito, actualiza la cantidad
-                return {
-                    cartList: state.cartList.map(item =>
-                        item.id === id
-                            ? { ...item, quantity: item.quantity + quantity }
-                            : item
-                    )
-                };
-            } else {
-                // Si no está en el carrito, lo agrega como nuevo
-                return {
-                    cartList: [...state.cartList, { id, quantity }]
-                };
-            }
+    updateCartDecreace: (id) => {
+        set((state) => {
+        const updatedCart = state.cartList
+            .map((item) => {
+            if (item.id !== id) return item;
+
+            if (item.quantity <= 1) return null;
+            return { ...item, quantity: item.quantity - 1 };
+            })
+            .filter((item) => item !== null);
+
+        // Save updated cart to localStorage
+        localStorage.setItem('cartList', JSON.stringify(updatedCart));
+
+        return { cartList: updatedCart };
         });
     },
-    updateCartIncreace: (id) => {
-        set((state) => ({
 
-            cartList: state.cartList.map((item) =>{
-                if(item.id !== id){
-                    return item;
-                }
-                const quantityItem = state.shoes.find((shoe) => shoe.id === id).stock;
-                
-                if(item.quantity >= quantityItem){
-                    return item;
-                }
-                return { ...item, quantity: item.quantity + 1 }
-        }),
-        }));
-    },
-    updateCartDecreace: (id) => {
-        set((state) => ({
-            cartList: state.cartList.map((item) => {
-                if (item.id !== id) {
-                    return item;
-                }
-                if(item.quantity === 1){
-                    return null;
-                }
-                if (item.quantity <= 1) {
-                    return item;
-                }
-                return { ...item, quantity: item.quantity - 1 };
-            }).filter((item) => item !== null)
-        }));
-    },
     removeCart: (id) => {
-        set((state) => ({
-            cartList: state.cartList.filter((item) => item.id !== id),
-        }));
+    set((state) => {
+      const updatedCart = state.cartList.filter((item) => item.id !== id);
+
+      // Save updated cart to localStorage
+      localStorage.setItem('cartList', JSON.stringify(updatedCart));
+
+      return { cartList: updatedCart };
+    });
     },
+
 
     countItems: () => {
         const cartList = useShoesStore.getState().cartList;
@@ -68,6 +96,7 @@ export const createCartList = (set) => ({
 
     clearCart: () => {
         set({ cartList: [] });
+        localStorage.removeItem("cartList");
     }
 });
  

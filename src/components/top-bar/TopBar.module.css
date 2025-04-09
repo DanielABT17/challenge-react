@@ -48,6 +48,10 @@
     margin-right: 2rem;
 }
 
+.top__bar--logo:hover {
+    cursor: pointer;
+}
+
 .nav__button {
     background-color: transparent;
     border: none;
@@ -100,3 +104,4 @@
     margin: 0;
     
 }
+

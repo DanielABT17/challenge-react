@@ -43,7 +43,7 @@ export function ShowTextDetail({ productInformation }) {
 }
 
 export function Price({ productInformation }) {
-  const hasDiscount = productInformation.Descuento != 0;
+  const hasDiscount = productInformation.Descuento !== 0;
   return (
     <section className={styles["div__Price--priceContainer"]}>
       <div>

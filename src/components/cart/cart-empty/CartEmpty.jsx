@@ -6,7 +6,6 @@ const CartEmpty = () => {
   const cartList = useShoesStore((state) => state.cartList);
   const isEmpty =
     cartList == undefined || cartList.length == 0 || cartList === null;
-  console.log(cartList);
   return (
     <div className={styles["cart"]}>
       <div className={styles["cart__header"]}>
